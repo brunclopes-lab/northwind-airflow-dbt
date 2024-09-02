@@ -1,0 +1,193 @@
+[2024-09-02T08:41:18.002+0000] {processor.py:186} INFO - Started process (PID=220) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:41:18.003+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:41:18.080+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.009+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:41:18.101+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.101+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:41:18.119+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.119+0000] {graph.py:477} INFO - Cosmos performance: Cache miss for cosmos_cache__dag_northwind__transform_data
+[2024-09-02T08:41:18.120+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.119+0000] {graph.py:529} INFO - Trying to parse the dbt project in `/opt/airflow/dbt/dbt-northwind-rds/northwind` using dbt ls...
+[2024-09-02T08:41:18.121+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.121+0000] {config.py:320} INFO - Profile caching is enable.
+[2024-09-02T08:41:18.121+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.121+0000] {base.py:241} INFO - Using mock values for profile northwind
+[2024-09-02T08:41:18.123+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.123+0000] {config.py:307} INFO - Profile not found in cache storing and using profile: /tmp/cosmos/profile/6612f80d4ff375f7d31fce1cd22192bc238e0d7824a0ed4d28b6f811e01eada4/profiles.yml.
+[2024-09-02T08:41:18.123+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.123+0000] {project.py:36} INFO - Project /opt/airflow/dbt/dbt-northwind-rds/northwind does not have {'packages.yml', 'dependencies.yml'}
+[2024-09-02T08:41:18.124+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:18.124+0000] {graph.py:136} INFO - Running command: `/home/airflow/.local/bin/dbt ls --output json --project-dir /tmp/tmp6nky3tms --profiles-dir /tmp/cosmos/profile/6612f80d4ff375f7d31fce1cd22192bc238e0d7824a0ed4d28b6f811e01eada4 --profile northwind --target prod`
+[2024-09-02T08:41:36.597+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.597+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0007211699999061238
+[2024-09-02T08:41:36.600+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.600+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-09-02T08:41:36.612+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.612+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:41:36.612+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.612+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:41:36.612+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.612+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|220]: It took 18.5s to parse the dbt project for DAG using LoadMode.DBT_LS
+[2024-09-02T08:41:36.624+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.623+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|220]: It took 0.0111s to build the Airflow DAG.
+[2024-09-02T08:41:36.627+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:41:36.810+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.809+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:dag_northwind
+[2024-09-02T08:41:36.823+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.823+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:dag_northwind
+[2024-09-02T08:41:36.831+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.831+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:dag_northwind
+[2024-09-02T08:41:36.832+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.832+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:41:36.844+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.843+0000] {dag.py:3234} INFO - Creating ORM DAG for dag_northwind
+[2024-09-02T08:41:36.887+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:41:36.887+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-02T08:41:36.911+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 18.924 seconds
+[2024-09-02T08:42:07.172+0000] {processor.py:186} INFO - Started process (PID=235) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:42:07.175+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:42:07.177+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.177+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:42:07.189+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.189+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:42:07.210+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.210+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0013727040000048873
+[2024-09-02T08:42:07.211+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.211+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|235]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:42:07.214+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.214+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:42:07.215+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.214+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:42:07.215+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.215+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:42:07.215+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.215+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|235]: It took 0.026s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:42:07.233+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.233+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|235]: It took 0.0178s to build the Airflow DAG.
+[2024-09-02T08:42:07.236+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:42:07.319+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.318+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:42:07.405+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:07.404+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-02T08:42:07.493+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 0.328 seconds
+[2024-09-02T08:42:37.675+0000] {processor.py:186} INFO - Started process (PID=246) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:42:37.676+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:42:37.678+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.678+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:42:37.685+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.685+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:42:37.699+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.699+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.00051707600005102
+[2024-09-02T08:42:37.699+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.699+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|246]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:42:37.702+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.701+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:42:37.702+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.702+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:42:37.702+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.702+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:42:37.702+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.702+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|246]: It took 0.0175s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:42:37.711+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.711+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|246]: It took 0.00893s to build the Airflow DAG.
+[2024-09-02T08:42:37.713+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:42:37.780+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.780+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:42:37.808+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:42:37.808+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-02T08:42:37.827+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 0.156 seconds
+[2024-09-02T08:43:08.386+0000] {processor.py:186} INFO - Started process (PID=262) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:43:08.481+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:43:08.486+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:08.485+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:43:08.686+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:08.685+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:43:09.284+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.283+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0026139409999359486
+[2024-09-02T08:43:09.286+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.285+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|262]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:43:09.386+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.385+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:43:09.387+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.387+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:43:09.388+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.388+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:43:09.389+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.389+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|262]: It took 0.704s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:43:09.685+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:09.684+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|262]: It took 0.295s to build the Airflow DAG.
+[2024-09-02T08:43:09.687+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:43:10.286+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:10.286+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:43:10.884+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:10.883+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:43:11.386+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 3.100 seconds
+[2024-09-02T08:43:42.094+0000] {processor.py:186} INFO - Started process (PID=282) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:43:42.181+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:43:42.187+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.186+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:43:42.286+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.286+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:43:42.785+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.784+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0025448129999858793
+[2024-09-02T08:43:42.786+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.785+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|282]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:43:42.789+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.788+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:43:42.789+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.789+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:43:42.880+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.880+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:43:42.881+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:42.881+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|282]: It took 0.596s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:43:43.093+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:43.092+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|282]: It took 0.211s to build the Airflow DAG.
+[2024-09-02T08:43:43.094+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:43:43.682+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:43.681+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:43:43.891+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:43:43.891+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:43:44.385+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 2.296 seconds
+[2024-09-02T08:44:14.962+0000] {processor.py:186} INFO - Started process (PID=294) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:44:14.963+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:44:14.965+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.964+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:44:14.972+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.971+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:44:14.985+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.985+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0005459330000121554
+[2024-09-02T08:44:14.985+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.985+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|294]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:44:14.987+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.987+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:44:14.987+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.987+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:44:14.987+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.987+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:44:14.987+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.987+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|294]: It took 0.0161s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:44:14.999+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:14.999+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|294]: It took 0.0115s to build the Airflow DAG.
+[2024-09-02T08:44:15.001+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:44:15.031+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:15.031+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:44:15.094+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:15.094+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:44:15.116+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 0.158 seconds
+[2024-09-02T08:44:45.283+0000] {processor.py:186} INFO - Started process (PID=305) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:44:45.285+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:44:45.287+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.286+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:44:45.293+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.293+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:44:45.305+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.305+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0005111719999604247
+[2024-09-02T08:44:45.305+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.305+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|305]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:44:45.307+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.307+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:44:45.307+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.307+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:44:45.307+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.307+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:44:45.308+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.308+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|305]: It took 0.0147s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:44:45.317+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.317+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|305]: It took 0.00939s to build the Airflow DAG.
+[2024-09-02T08:44:45.318+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:44:45.341+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.341+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:44:45.393+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:44:45.393+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:44:45.410+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 0.132 seconds
+[2024-09-02T08:45:17.485+0000] {processor.py:186} INFO - Started process (PID=337) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:45:17.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:45:17.684+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:17.683+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:45:17.789+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:17.789+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:45:18.382+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.381+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0008295860000089306
+[2024-09-02T08:45:18.382+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.382+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|337]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:45:18.386+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.386+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:45:18.387+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.387+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:45:18.387+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.387+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:45:18.388+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.387+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|337]: It took 0.599s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:45:18.682+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:18.682+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|337]: It took 0.294s to build the Airflow DAG.
+[2024-09-02T08:45:18.684+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:45:19.889+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:19.888+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:45:20.785+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:20.785+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:45:21.881+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 4.794 seconds
+[2024-09-02T08:45:55.083+0000] {processor.py:186} INFO - Started process (PID=353) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:45:55.181+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:45:55.383+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:55.381+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:45:55.489+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:55.488+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:45:56.387+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.386+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0022624579999046546
+[2024-09-02T08:45:56.387+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.387+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|353]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:45:56.486+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.485+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:45:56.486+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.486+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:45:56.487+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.487+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:45:56.487+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.487+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|353]: It took 0.999s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:45:56.888+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:56.887+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|353]: It took 0.4s to build the Airflow DAG.
+[2024-09-02T08:45:56.889+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:45:57.987+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:57.987+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:45:58.889+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:45:58.889+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:45:59.981+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 5.094 seconds
+[2024-09-02T08:46:31.684+0000] {processor.py:186} INFO - Started process (PID=370) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:46:31.782+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:46:31.882+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:31.880+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:46:32.080+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:31.989+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:46:32.682+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:32.682+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.1924617299998772
+[2024-09-02T08:46:32.684+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:32.683+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|370]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:46:32.689+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:32.688+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:46:32.782+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:32.782+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:46:32.784+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:32.783+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:46:32.785+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:32.785+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|370]: It took 0.796s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:46:33.086+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:33.085+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|370]: It took 0.301s to build the Airflow DAG.
+[2024-09-02T08:46:33.088+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:46:34.182+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:34.181+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:46:34.686+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:46:34.686+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:46:35.585+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 4.005 seconds
+[2024-09-02T08:47:06.885+0000] {processor.py:186} INFO - Started process (PID=424) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:47:06.980+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:47:07.088+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:07.088+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:47:07.287+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:07.287+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:47:07.987+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:07.987+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0057074329999977635
+[2024-09-02T08:47:07.988+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:07.988+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|424]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:47:08.084+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:08.084+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:47:08.086+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:08.085+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:47:08.086+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:08.086+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:47:08.087+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:08.086+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|424]: It took 0.8s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:47:08.681+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:08.680+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|424]: It took 0.594s to build the Airflow DAG.
+[2024-09-02T08:47:08.683+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:47:09.881+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:09.880+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:47:10.391+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:10.391+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:47:11.784+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 5.002 seconds
+[2024-09-02T08:47:43.298+0000] {processor.py:186} INFO - Started process (PID=440) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:47:43.380+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:47:43.385+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:43.385+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:47:43.587+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:43.587+0000] {graph.py:471} INFO - Trying to parse the dbt project using dbt ls cache cosmos_cache__dag_northwind__transform_data...
+[2024-09-02T08:47:44.586+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.586+0000] {cache.py:320} INFO - Cosmos performance: time to calculate cache identifier cosmos_cache__dag_northwind__transform_data for current version: 0.0034050350000143226
+[2024-09-02T08:47:44.586+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.586+0000] {graph.py:488} INFO - Cosmos performance [edf1a788419f|440]: The cache size for cosmos_cache__dag_northwind__transform_data is 51495
+[2024-09-02T08:47:44.682+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.681+0000] {graph.py:496} INFO - Cosmos performance: Cache hit for cosmos_cache__dag_northwind__transform_data - 61dfed782615a7674796466934a2733a,d41d8cd98f00b204e9800998ecf8427e
+[2024-09-02T08:47:44.684+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.684+0000] {graph.py:412} INFO - Total nodes: 73
+[2024-09-02T08:47:44.685+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.685+0000] {graph.py:413} INFO - Total filtered nodes: 73
+[2024-09-02T08:47:44.685+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.685+0000] {converter.py:265} INFO - Cosmos performance (dag_northwind__transform_data) -  [edf1a788419f|440]: It took 1.1s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE
+[2024-09-02T08:47:44.888+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:44.888+0000] {converter.py:309} INFO - Cosmos performance (dag_northwind__transform_data) - [edf1a788419f|440]: It took 0.203s to build the Airflow DAG.
+[2024-09-02T08:47:44.981+0000] {processor.py:925} INFO - DAG(s) 'dag_northwind' retrieved from /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:47:46.482+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:46.481+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:47:47.085+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:47:47.084+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:47:47.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag_northwind.py took 4.590 seconds
+[2024-09-02T08:48:19.387+0000] {processor.py:186} INFO - Started process (PID=491) to work on /opt/airflow/dags/dag_northwind.py
+[2024-09-02T08:48:19.481+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag_northwind.py for tasks to queue
+[2024-09-02T08:48:19.486+0000] {logging_mixin.py:190} INFO - [2024-09-02T08:48:19.485+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/dag_northwind.py

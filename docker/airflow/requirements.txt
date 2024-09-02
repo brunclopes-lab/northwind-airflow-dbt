@@ -1,0 +1,4 @@
+astro-sdk-python==1.8.1
+dbt-postgres==1.8.2
+astronomer-cosmos==1.6.0
+dbt-core==1.8.5

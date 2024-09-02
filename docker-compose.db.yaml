@@ -1,0 +1,44 @@
+x-commons: &commons
+  networks:
+    - datalake-network
+
+####################
+### POSTGRES LAB
+####################
+
+services:
+  postgres_lab:
+    <<: *commons
+    image: postgres:latest
+    restart: always
+    hostname: postgres_lab
+    container_name: postgres_lab
+    ports:
+      - "55432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER_LAB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_LAB}
+      POSTGRES_DB: northwind
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+      - postgresql_bin:/usr/lib/postgresql
+      - ./docker/postgres/northwind.sql:/docker-entrypoint-initdb.d/northwind.sql
+    mem_limit: 1g
+    cpus: 0.5
+    env_file:
+      - .env    
+    networks:
+      datalake-network:
+        ipv4_address: 192.177.0.3 
+
+volumes:
+  postgresql_data:
+    driver: local
+  postgresql_bin:
+    driver: local
+
+networks:
+  datalake-network:
+    name: ${NETWORK_MODE}
+    external: true

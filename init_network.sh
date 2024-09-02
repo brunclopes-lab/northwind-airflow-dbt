@@ -1,0 +1,1 @@
+docker network create --subnet=192.177.0.0/16 datalake-network
