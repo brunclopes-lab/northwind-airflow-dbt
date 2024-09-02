@@ -1,0 +1,46 @@
+[2024-09-02T08:50:19.386+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-02T08:50:19.686+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_northwind.transform_data.report_total_revenues_per_customer_run scheduled__2024-09-01T00:00:00+00:00 [queued]>
+[2024-09-02T08:50:19.880+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_northwind.transform_data.report_total_revenues_per_customer_run scheduled__2024-09-01T00:00:00+00:00 [queued]>
+[2024-09-02T08:50:19.882+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 3
+[2024-09-02T08:50:20.289+0000] {taskinstance.py:2879} INFO - Executing <Task(DbtRunLocalOperator): transform_data.report_total_revenues_per_customer_run> on 2024-09-01 00:00:00+00:00
+[2024-09-02T08:50:20.388+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'dag_northwind', 'transform_data.report_total_revenues_per_customer_run', 'scheduled__2024-09-01T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/dag_northwind.py', '--cfg-path', '/tmp/tmptxx9j3x9']
+[2024-09-02T08:50:20.482+0000] {standard_task_runner.py:105} INFO - Job 34: Subtask transform_data.report_total_revenues_per_customer_run
+[2024-09-02T08:50:20.487+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=623) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-02T08:50:20.488+0000] {standard_task_runner.py:72} INFO - Started process 634 to run task
+[2024-09-02T08:50:21.287+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_northwind.transform_data.report_total_revenues_per_customer_run scheduled__2024-09-01T00:00:00+00:00 [running]> on host edf1a788419f
+[2024-09-02T08:50:23.087+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='dag_northwind' AIRFLOW_CTX_TASK_ID='transform_data.report_total_revenues_per_customer_run' AIRFLOW_CTX_EXECUTION_DATE='2024-09-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-01T00:00:00+00:00'
+[2024-09-02T08:50:23.088+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-02T08:51:01.989+0000] {local.py:186} INFO - dbtRunner is available. Using dbtRunner for invoking dbt.
+[2024-09-02T08:51:02.182+0000] {local.py:331} INFO - Cloning project to writable temp directory /tmp/tmpj8eqd1d8 from /opt/airflow/dbt/dbt-northwind-rds/northwind
+[2024-09-02T08:51:02.185+0000] {local.py:342} INFO - Partial parse is enabled and the latest partial parse file is /tmp/cosmos/dag_northwind__transform_data/target/partial_parse.msgpack
+[2024-09-02T08:51:02.787+0000] {config.py:320} INFO - Profile caching is enable.
+[2024-09-02T08:51:03.181+0000] {base.py:84} INFO - Retrieving connection 'postgres_northwind_conn'
+[2024-09-02T08:51:03.184+0000] {config.py:300} INFO - Profile found in cache using profile: /tmp/cosmos/profile/ea0ec41412b92407b31789c0ce4c41cea0a2df1cd220891a7703f93bcb509a09/profiles.yml.
+[2024-09-02T08:51:03.185+0000] {local.py:303} INFO - Trying to run dbtRunner with:
+ ['run', '--models', 'report_total_revenues_per_customer', '--project-dir', '/tmp/tmpj8eqd1d8', '--profiles-dir', '/tmp/cosmos/profile/ea0ec41412b92407b31789c0ce4c41cea0a2df1cd220891a7703f93bcb509a09', '--profile', 'northwind', '--target', 'prod']
+ in /tmp/tmpj8eqd1d8
+[2024-09-02T08:51:05.888+0000] {logging_mixin.py:190} INFO - 08:51:05  Running with dbt=1.8.5
+[2024-09-02T08:51:15.780+0000] {logging_mixin.py:190} INFO - 08:51:15  Registered adapter: postgres=1.8.2
+[2024-09-02T08:51:37.983+0000] {logging_mixin.py:190} INFO - 08:51:37  Found 17 models, 42 data tests, 14 sources, 417 macros
+[2024-09-02T08:51:38.090+0000] {logging_mixin.py:190} INFO - 08:51:38
+[2024-09-02T08:51:44.086+0000] {logging_mixin.py:190} INFO - 08:51:44  Concurrency: 1 threads (target='prod')
+[2024-09-02T08:51:44.182+0000] {logging_mixin.py:190} INFO - 08:51:44
+[2024-09-02T08:51:44.288+0000] {logging_mixin.py:190} INFO - 08:51:44  1 of 1 START sql table model northwind_gold.report_total_revenues_per_customer . [RUN]
+[2024-09-02T08:51:47.784+0000] {logging_mixin.py:190} INFO - 08:51:47  1 of 1 OK created sql table model northwind_gold.report_total_revenues_per_customer  [SELECT 89 in 3.30s]
+[2024-09-02T08:51:48.486+0000] {logging_mixin.py:190} INFO - 08:51:48
+[2024-09-02T08:51:48.487+0000] {logging_mixin.py:190} INFO - 08:51:48  Finished running 1 table model in 0 hours 0 minutes and 10.39 seconds (10.39s).
+[2024-09-02T08:51:49.788+0000] {logging_mixin.py:190} INFO - 08:51:49
+[2024-09-02T08:51:49.789+0000] {logging_mixin.py:190} INFO - 08:51:49  Completed successfully
+[2024-09-02T08:51:49.881+0000] {logging_mixin.py:190} INFO - 08:51:49
+[2024-09-02T08:51:49.883+0000] {logging_mixin.py:190} INFO - 08:51:49  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-09-02T08:51:50.981+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2024-09-02T08:51:50.982+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/run-results/v6.json is above dbt-ol supported version 5. This might cause errors.
+[2024-09-02T08:51:55.286+0000] {local.py:389} INFO - Inlets: [Dataset(uri='postgres://192.177.0.3:5432/northwind.northwind_intermediate.int_dim_customers', extra=None), Dataset(uri='postgres://192.177.0.3:5432/northwind.northwind_intermediate.int_fact_orders', extra=None)]
+[2024-09-02T08:51:55.287+0000] {local.py:390} INFO - Outlets: [Dataset(uri='postgres://192.177.0.3:5432/northwind.northwind_gold.report_total_revenues_per_customer', extra=None)]
+[2024-09-02T08:51:55.288+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:51:57.887+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:51:59.287+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-02T08:51:59.287+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_northwind, task_id=transform_data.report_total_revenues_per_customer_run, run_id=scheduled__2024-09-01T00:00:00+00:00, execution_date=20240901T000000, start_date=20240902T085019, end_date=20240902T085159
+[2024-09-02T08:51:59.580+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-02T08:51:59.611+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-02T08:51:59.613+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

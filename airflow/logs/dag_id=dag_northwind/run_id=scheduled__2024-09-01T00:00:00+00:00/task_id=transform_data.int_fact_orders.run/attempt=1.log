@@ -21,3 +21,25 @@
  in /tmp/tmpx6pkai3v
 [2024-09-02T08:48:31.388+0000] {logging_mixin.py:190} INFO - 08:48:31  Running with dbt=1.8.5
 [2024-09-02T08:48:36.881+0000] {logging_mixin.py:190} INFO - 08:48:36  Registered adapter: postgres=1.8.2
+[2024-09-02T08:48:49.180+0000] {logging_mixin.py:190} INFO - 08:48:49  Found 17 models, 42 data tests, 14 sources, 417 macros
+[2024-09-02T08:48:49.188+0000] {logging_mixin.py:190} INFO - 08:48:49
+[2024-09-02T08:48:52.382+0000] {logging_mixin.py:190} INFO - 08:48:52  Concurrency: 1 threads (target='prod')
+[2024-09-02T08:48:52.383+0000] {logging_mixin.py:190} INFO - 08:48:52
+[2024-09-02T08:48:52.487+0000] {logging_mixin.py:190} INFO - 08:48:52  1 of 1 START sql table model northwind_intermediate.fact_orders ................ [RUN]
+[2024-09-02T08:48:54.783+0000] {logging_mixin.py:190} INFO - 08:48:54  1 of 1 OK created sql table model northwind_intermediate.fact_orders ........... [SELECT 2155 in 2.20s]
+[2024-09-02T08:48:55.188+0000] {logging_mixin.py:190} INFO - 08:48:55
+[2024-09-02T08:48:55.189+0000] {logging_mixin.py:190} INFO - 08:48:55  Finished running 1 table model in 0 hours 0 minutes and 6.00 seconds (6.00s).
+[2024-09-02T08:48:55.687+0000] {logging_mixin.py:190} INFO - 08:48:55
+[2024-09-02T08:48:55.688+0000] {logging_mixin.py:190} INFO - 08:48:55  Completed successfully
+[2024-09-02T08:48:55.783+0000] {logging_mixin.py:190} INFO - 08:48:55
+[2024-09-02T08:48:55.784+0000] {logging_mixin.py:190} INFO - 08:48:55  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-09-02T08:48:56.787+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/manifest/v12.json is above dbt-ol supported version 7. This might cause errors.
+[2024-09-02T08:48:56.787+0000] {local.py:196} WARNING - Artifact schema version: https://schemas.getdbt.com/dbt/run-results/v6.json is above dbt-ol supported version 5. This might cause errors.
+[2024-09-02T08:48:59.083+0000] {local.py:389} INFO - Inlets: [Dataset(uri='postgres://192.177.0.3:5432/northwind.northwind_staging.staging_fact_orders', extra=None)]
+[2024-09-02T08:48:59.084+0000] {local.py:390} INFO - Outlets: [Dataset(uri='postgres://192.177.0.3:5432/northwind.northwind_intermediate.int_fact_orders', extra=None)]
+[2024-09-02T08:48:59.085+0000] {dag.py:3211} INFO - Sync 1 DAGs
+[2024-09-02T08:48:59.489+0000] {dag.py:4138} INFO - Setting next_dagrun for dag_northwind to 2024-09-02 00:00:00+00:00, run_after=2024-09-03 00:00:00+00:00
+[2024-09-02T08:49:00.488+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-02T08:49:00.489+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag_northwind, task_id=transform_data.int_fact_orders.run, run_id=scheduled__2024-09-01T00:00:00+00:00, execution_date=20240901T000000, start_date=20240902T084801, end_date=20240902T084900
+[2024-09-02T08:49:01.002+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-02T08:49:01.383+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
