@@ -24,7 +24,7 @@ services:
       - postgresql_data:/var/lib/postgresql/data
       - postgresql_bin:/usr/lib/postgresql
       - ./docker/postgres/northwind.sql:/docker-entrypoint-initdb.d/northwind.sql
-    mem_limit: 1g
+    mem_limit: 8g
     cpus: 0.5
     env_file:
       - .env    

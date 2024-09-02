@@ -16,7 +16,7 @@ ROOT_PATH = f"/opt/airflow/dbt"
 REPO_PATH = f"{ROOT_PATH}/{REPO_GITHUB_NAME}" 
 DBT_PROJECT_PATH = f"{REPO_PATH}/northwind"
 
-S3_CONNECTION_ID = "aws_s3"
+S3_CONNECTION_ID = "s3_dbt_docs"
 S3_BUCKET = "dbt-docs-datalake"
 
 # Configuração do perfil
