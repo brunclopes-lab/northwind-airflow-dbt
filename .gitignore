@@ -1,1 +1,1 @@
-*.sh
+airflow/logs/*
