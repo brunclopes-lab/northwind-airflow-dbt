@@ -16,7 +16,7 @@ https://github.com/brunclopes-lab/dbt-northwind-rds
 
 ### Como executar o projeto
 
-#### Clonar o repositório, criar as conexões com o S3 e com o PostgreSQL. A conexão com o S3 deverá ter o nome chamado "aws_s3", e a conexão com o Postgres deverá ter o nome "postgres_northwind_conn". Caso mude o nome deverá também ser alterado na DAG. 
+#### Clonar o repositório, executar o comando "init_project.sh" e após o levantamento dos recursos, criar as conexões com o S3 e com o PostgreSQL. A conexão com o S3 deverá ter o nome chamado "aws_s3", e a conexão com o Postgres deverá ter o nome "postgres_northwind_conn". Caso mude o nome deverá também ser alterado na DAG. 
 
 #### Exemplo de conexão com o S3, bsata preencher o access e secret key. 
 ![alt text](images/conn_s3.png)
